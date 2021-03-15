@@ -8,6 +8,7 @@ namespace LINQHW
     {
         static void Main(string[] args)
         {
+            // *********//
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("Task 2.1 :  ");
             Console.ResetColor();
@@ -20,18 +21,36 @@ namespace LINQHW
                 Console.Write($"{item};  ");
             Console.WriteLine("}");
 
-
+            // ******** //
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("Task 2.2 :  ");
             Console.ResetColor();
            
-            Console.WriteLine("Enter array elements: ");
+            Console.WriteLine("Enter numbers: ");
             string[] numbers = Console.ReadLine().Split();
 
             var positiveCount = numbers.Where(n => int.Parse(n) > 0).Count();
             var negativeSum = numbers.Where(n => (int.Parse(n) < 0)).Sum(n => int.Parse(n));
            
             Console.WriteLine($"[{positiveCount},  {negativeSum}]");
+
+ 
+
+            // ******** //
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("Task 2.3 :  ");
+            Console.ResetColor();
+           
+            Console.WriteLine("Enter words: ");
+            string[] words = Console.ReadLine().Split();
+
+            var wordsSelect = words.OrderBy(w => w.Length);
+            foreach (var w in wordsSelect)
+                Console.Write($"{w} ");
+
+        
+            // ******** //
+
         }
     }
 }
