@@ -50,6 +50,14 @@ namespace LINQHW
 
         
             // ******** //
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("\nTask 2.3 :  ");
+            Console.ResetColor();
+            Console.WriteLine("Enter numbers where all are equal except one: ");
+            string[] numbers2 = Console.ReadLine().Split();
+            var selectNumber = numbers2.First(n => n != (numbers2.First())) == numbers2.Last(n => n != (numbers2.First())) ?
+                numbers2.First(n => n != (numbers2.First())) : numbers2.First();
+            Console.Write($"{selectNumber}");
 
         }
     }
